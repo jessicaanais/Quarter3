@@ -1,9 +1,32 @@
-import React from 'react'
+import React, {Component} from 'react'
+import {connect} from 'react-redux'
+import { Row, Col, Container } from 'reactstrap'
+import Quote from './Quote'
 
-const Allquotes = (props) => {
+class Allquotes extends Component{
+  render(){
+  let theQuotes = this.props.quotes.map( quote => {
+    return (
+      <Col key={quote.id} xs="3">
+        <Quote quote={quote} />
+      </Col>
+    )
+  })
   return (
-    <div> All quotes</div>
+    <div>
+      <Container>
+        <Row>
+        {theQuotes}
+        </Row>
+      </Container>
+    </div>
   )
 }
+}
 
-export default Allquotes
+function mapStateToProps(state) {
+  return {
+    quotes: state.quotes
+  }
+}
+export default connect(mapStateToProps, null)(Allquotes)
