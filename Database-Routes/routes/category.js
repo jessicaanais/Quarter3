@@ -5,7 +5,7 @@ var knex = require('../db/knex');
 router.get('/category', function(req, res, next) {
   knex('Category')
     .select()
-      .then(category =>
+    .then(category =>
         res.json(category))
 });
 
