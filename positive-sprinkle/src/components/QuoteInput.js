@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Button, Form, FormGroup, Label, Input, Col, Row } from 'reactstrap';
+import { bindActionCreators } from 'redux'
+import { addQuotes } from '../actions/quotes'
+import { connect } from 'react-redux'
 
-export default class Example extends React.Component {
+class QuoteInput extends Component {
   state = {
     quote: '',
+    img: '',
     writer: '',
-    image: ''
+    category_id: ''
   }
   handleSubmit = (e) => {
     e.preventDefault()
+    this.props.addQuotes(this.state)
   }
   render() {
     return (
@@ -17,9 +22,17 @@ export default class Example extends React.Component {
       <Col sm="12" md={{ size: 8, offset: 2 }}>
       <FormGroup>
         <Label for="category">Category</Label>
-        <Input type="select" id="">
-          <option>1</option>
-          <option>2</option>
+        <Input
+          type="select"
+          id=""
+          value={this.state.category_id}
+          onChange={(e) => this.setState({category_id: e.target.value})}
+        >
+          <option value="1">Motivation</option>
+          <option value="2">Relationships</option>
+          <option value="3">Confidence</option>
+          <option value="4">Family</option>
+          <option value="5">Life</option>
         </Input>
       </FormGroup>
       </Col>
@@ -42,14 +55,22 @@ export default class Example extends React.Component {
         <Row>
         <Col sm="12" md={{ size: 8, offset: 2 }}>
         <FormGroup>
-          <Label for="image">Image</Label>
-          <Input type="text" name="category" id="" onChange = {(e) => this.setState({ image: e.target.value })} value = {this.state.image}>
+          <Label for="img">Image</Label>
+          <Input type="text" name="category" id="" onChange = {(e) => this.setState({ img: e.target.value })} value = {this.state.img}>
           </Input>
         </FormGroup>
         </Col>
         </Row>
-        <Button type="submit"> + </Button>
+        <Button type="submit"> Add Quote </Button>
       </Form>
     );
   }
 }
+
+function mapDispatchToProps(dispatch){
+  return {
+    addQuotes: bindActionCreators(addQuotes, dispatch)
+  }
+}
+
+export default connect(null, mapDispatchToProps)(QuoteInput)

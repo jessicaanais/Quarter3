@@ -14,3 +14,19 @@ export const getQuotes = () => {
     })
   }
 }
+
+
+export const ADD_QUOTES_PENDING = 'ADD_QUOTES_PENDING';
+export const ADD_QUOTES_SUCCESS = 'ADD_QUOTES_SUCCESS';
+
+
+export const addQuotes = (newQuote) => {
+  return async (dispatch) => {
+    dispatch({ type: ADD_QUOTES_PENDING })
+    let quotes = await axios.post('http://localhost:8000/quotes', newQuote)
+    dispatch({
+      type: ADD_QUOTES_SUCCESS,
+      payload: quotes
+    })
+  }
+}
