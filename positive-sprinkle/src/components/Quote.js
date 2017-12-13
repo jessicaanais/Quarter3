@@ -1,9 +1,11 @@
 import React from 'react'
-import { Card, CardImg, CardText, CardBody } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, Button } from 'reactstrap';
+import { removeQuote } from '../actions/quotes'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 
 const Quote = (props) => {
-  console.log(props)
-  let { quote, img, writer } = props.quote
+  let { id, quote, img, writer } = props.quote
   return (
     <div>
       <Card style={{borderRadius: 20, marginTop: 10}}>
@@ -11,6 +13,7 @@ const Quote = (props) => {
         <CardBody>
           <CardText style={{fontSize:15}}>{quote}</CardText>
           <CardText style={{fontSize:13}}>-{writer}</CardText>
+          <Button onClick = {() => props.removeQuote(id)}> Remove </Button>
         </CardBody>
       </Card>
     </div>
@@ -18,4 +21,10 @@ const Quote = (props) => {
   )
 }
 
-export default Quote
+function mapDispatchToProps(dispatch){
+  return {
+    removeQuote : bindActionCreators(removeQuote, dispatch)
+  }
+}
+
+export default connect (null, mapDispatchToProps)(Quote)

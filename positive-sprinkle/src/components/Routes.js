@@ -16,6 +16,9 @@ import {
 } from 'react-router-dom'
 
 class Routes extends Component {
+  state = {
+    show:false
+  }
   render() {
     return (
       <div className="App">
@@ -31,13 +34,15 @@ class Routes extends Component {
             <Button style= {{marginRight: 20, borderRadius: 10, backgroundColor: '#D9B291', borderWidth: 2, borderColor: '#978379'}}><Link style ={{color:'#183452', textDecoration:'none'}} to="/Life">Life</Link></Button>
           </ButtonGroup>
 
-          <Container>
+          <Button onClick ={()=> this.setState({ show: !this.state.show})}> + </Button>
+
+          {this.state.show && <Container>
             <Row>
               <Col>
                 <QuoteInput />
               </Col>
             </Row>
-          </Container>
+          </Container>}
 
 
             <Switch>
