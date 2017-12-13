@@ -17,4 +17,15 @@ router.post('/quotes', function (req, res) {
   });
 });
 
+router.delete('/quotes/:id', function (req, res) {
+  knex('Quotes')
+  .del()
+  .where('id', req.params.id)
+    .then(function () {
+   knex('Quotes')
+   .select()
+    .then(quote => res.json(quote))
+  });
+});
+
 module.exports = router;
