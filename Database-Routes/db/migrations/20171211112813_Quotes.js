@@ -5,7 +5,6 @@ exports.up = function(knex, Promise) {
     table.string('quote');
     table.string('img');
     table.string('writer')
-    table.boolean('heart').defaultsTo(false);
     table.integer('category_id')
       .notNullable()
       .references('id')
