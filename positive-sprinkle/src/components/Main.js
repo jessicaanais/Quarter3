@@ -2,7 +2,7 @@ import React from 'react'
 
 const Main = (props) => {
   return (
-    <div>Main component</div>
+    <div style={{ backgroundImage: "url('./background.jpg')"}}>Main component</div>
   )
 }
 
