@@ -6,7 +6,8 @@ import Family from './Family'
 import Life from './Life'
 import Motivation from './Motivation'
 import Relationships from './Relationships'
-import { ButtonGroup, Button } from 'reactstrap'
+import { ButtonGroup, Button, Container, Row, Col } from 'reactstrap'
+import QuoteInput from './QuoteInput'
 import {
   BrowserRouter as Router,
   Route,
@@ -29,6 +30,15 @@ class Routes extends Component {
             <Button style= {{marginRight: 20, borderRadius: 10, backgroundColor: '#D9B291', borderWidth: 2, borderColor: '#978379'}}><Link style ={{color:'#183452', textDecoration:'none'}} to="/Family">Family</Link></Button>
             <Button style= {{marginRight: 20, borderRadius: 10, backgroundColor: '#D9B291', borderWidth: 2, borderColor: '#978379'}}><Link style ={{color:'#183452', textDecoration:'none'}} to="/Life">Life</Link></Button>
           </ButtonGroup>
+
+          <Container>
+            <Row>
+              <Col>
+                <QuoteInput />
+              </Col>
+            </Row>
+          </Container>
+
 
             <Switch>
               <Route exact path="/" component={Main}/>
