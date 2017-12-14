@@ -17,6 +17,7 @@ class QuoteInput extends Component {
   }
   render() {
     return (
+      <div style={{paddingBottom: 15}}>
       <Form onSubmit={this.handleSubmit} style={{marginTop: 15}}>
       <Row>
       <Col sm="12" md={{ size: 8, offset: 2 }}>
@@ -63,6 +64,7 @@ class QuoteInput extends Component {
         </Row>
         <Button type="submit"> Add Quote </Button>
       </Form>
+      </div>
     );
   }
 }

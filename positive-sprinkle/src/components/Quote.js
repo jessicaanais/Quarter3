@@ -8,10 +8,10 @@ const Quote = (props) => {
   let { id, quote, img, writer } = props.quote
   return (
     <div>
-      <Card style={{borderRadius: 20, marginTop: 10}}>
-        <CardImg style={{borderRadius: 10}} top width="100%" src={img} alt="Card image cap" height="300" />
+      <Card style={{marginTop: 8}}>
+        <CardImg width="100%" src={img} alt="Card image cap" height="275"  />
         <CardBody>
-          <CardText style={{fontSize:15}}>{quote}</CardText>
+          <h5>{quote}</h5>
           <CardText style={{fontSize:13}}>-{writer}</CardText>
           <Button onClick = {() => props.removeQuote(id)}> Remove </Button>
         </CardBody>

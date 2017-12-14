@@ -21,17 +21,18 @@ class Routes extends Component {
   }
   render() {
     return (
-      <div className="App">
+      <div>
         <Router>
           <div>
-          <ButtonGroup size="lg" style = {{paddingTop: 10}}>
-            <Button style= {{marginRight: 20, borderRadius: 10, backgroundColor: '#D9B291', borderWidth: 2, borderColor: '#978379'}}><Link style ={{color:'#183452', textDecoration:'none'}} to="/">Main</Link></Button>
-            <Button style= {{marginRight: 20, borderRadius: 10, backgroundColor: '#D9B291', borderWidth: 2, borderColor: '#978379'}}><Link style ={{color:'#183452', textDecoration:'none'}} to="/viewquotes">View All Quotes</Link></Button>
-            <Button style= {{marginRight: 20, borderRadius: 10, backgroundColor: '#D9B291', borderWidth: 2, borderColor: '#978379'}}><Link style ={{color:'#183452', textDecoration:'none'}} to="/Motivation">Motivation</Link></Button>
-            <Button style= {{marginRight: 20, borderRadius: 10, backgroundColor: '#D9B291', borderWidth: 2, borderColor: '#978379'}}><Link style ={{color:'#183452', textDecoration:'none'}} to="/Relationships">Relationships</Link></Button>
-            <Button style= {{marginRight: 20, borderRadius: 10, backgroundColor: '#D9B291', borderWidth: 2, borderColor: '#978379'}}><Link style ={{color:'#183452', textDecoration:'none'}} to="/Confidence">Confidence</Link></Button>
-            <Button style= {{marginRight: 20, borderRadius: 10, backgroundColor: '#D9B291', borderWidth: 2, borderColor: '#978379'}}><Link style ={{color:'#183452', textDecoration:'none'}} to="/Family">Family</Link></Button>
-            <Button style= {{marginRight: 20, borderRadius: 10, backgroundColor: '#D9B291', borderWidth: 2, borderColor: '#978379'}}><Link style ={{color:'#183452', textDecoration:'none'}} to="/Life">Life</Link></Button>
+          <div style={{ backgroundColor: '#eff1f4'}}>
+          <ButtonGroup size="lg" style = {{paddingTop: 10, paddingBottom: 15}}>
+            <Button style= {{marginRight: 20, backgroundColor: '#eff1f4', border: 0}}><Link style ={{color:'black', textDecoration:'none'}} to="/">Home</Link></Button>
+            <Button style= {{marginRight: 20, backgroundColor: '#eff1f4', border: 0}}><Link style ={{color:'black', textDecoration:'none'}} to="/viewquotes">View All Quotes</Link></Button>
+            <Button style= {{marginRight: 20, backgroundColor: '#eff1f4', border: 0}}><Link style ={{color:'black', textDecoration:'none'}} to="/Motivation">Motivation</Link></Button>
+            <Button style= {{marginRight: 20, backgroundColor: '#eff1f4', border: 0}}><Link style ={{color:'black', textDecoration:'none'}} to="/Relationships">Relationships</Link></Button>
+            <Button style= {{marginRight: 20, backgroundColor: '#eff1f4', border: 0}}><Link style ={{color:'black', textDecoration:'none'}} to="/Confidence">Confidence</Link></Button>
+            <Button style= {{marginRight: 20, backgroundColor: '#eff1f4', border: 0}}><Link style ={{color:'black', textDecoration:'none'}} to="/Family">Family</Link></Button>
+            <Button style= {{marginRight: 20, backgroundColor: '#eff1f4', border: 0}}><Link style ={{color:'black', textDecoration:'none'}} to="/Life">Life</Link></Button>
           </ButtonGroup>
 
           <Button onClick ={()=> this.setState({ show: !this.state.show})}> + </Button>
@@ -43,8 +44,7 @@ class Routes extends Component {
               </Col>
             </Row>
           </Container>}
-
-
+          </div>
             <Switch>
               <Route exact path="/" component={Main}/>
               <Route exact path="/viewquotes" component={Allquotes}/>
@@ -54,6 +54,7 @@ class Routes extends Component {
               <Route exact path="/Family" component={Family}/>
               <Route exact path="/Life" component={Life}/>
             </Switch>
+
           </div>
         </Router>
     </div>

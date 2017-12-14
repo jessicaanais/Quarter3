@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+// import { Row, Col } from 'reactstrap';
 
-const Footer = (props) => {
+const Footer = () => {
   return (
-    <div>Footer</div>
+    <div style={{ backgroundColor: '#eff1f4'}}>
+        <p style={{ margin: 0}}>.</p>
+    </div>
   )
 }
 
-export default Footer
+export default Footer;

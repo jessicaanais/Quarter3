@@ -5,6 +5,7 @@ import { getQuotes } from './actions/quotes';
 import './App.css';
 import Navbar from './components/Navbar'
 import Routes from './components/Routes'
+import Footer from './components/Footer'
 
 class App extends Component {
   componentDidMount(){
@@ -16,6 +17,7 @@ class App extends Component {
       <div className="App">
         <Navbar />
         <Routes />
+        <Footer />
     </div>
     );
   }

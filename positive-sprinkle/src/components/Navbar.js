@@ -1,13 +1,11 @@
 import React from 'react';
-import {Navbar, NavbarBrand} from 'reactstrap';
+// import {Navbar} from 'reactstrap';
 
-export default class Example extends React.Component {
+export default class Navbar extends React.Component {
   render() {
     return (
-      <div>
-        <Navbar style={{ backgroundColor: '#183452'}}>
-          <NavbarBrand className="mr-auto">reactstrap</NavbarBrand>
-        </Navbar>
+      <div style={{ backgroundColor: '#eff1f4'}}>
+          <p style={{ textAlign: 'center', margin: 0}}>Positivity</p>
       </div>
     );
   }
