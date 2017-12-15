@@ -6,8 +6,8 @@ const Footer = () => {
     <div>
       <footer>
               <Row style={{ backgroundColor: "#eff1f4"}}>
-                <Col style={{color: "#eff1f4"}}>
-                  .
+                <Col>
+                  <h3 style={{fontSize: 23, paddingTop:'6px'}}> Created by <a href="https://www.linkedin.com/in/jessica-anais-duarte-cabrera-540099148">Michael</a></h3>
                 </Col>
             </Row>
         </footer>

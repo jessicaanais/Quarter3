@@ -8,13 +8,13 @@ class Motivation extends Component{
     let hello = this.props.quotes.filter(quote => quote.category_id ===  4)
     let bye = hello.map( quote => {
       return (
-        <Col key={quote.id} xs="6" style={{ padding: 5}}>
-          <div className="card">
-            <Card>
+        <Col key={quote.id} xs="6">
+          <div className="card" >
+            <Card style={{ border: '100px', outline: 'none'}}>
               <CardImg top width="100%" src={quote.img} alt="Card image cap" height="300" />
               <CardBody style={{ paddingBottom: 0}}>
-                <h5>{quote.quote}</h5>
-                <p style={{fontSize:15, textAlign: 'right', padding: 0}}>-{quote.writer}</p>
+                <h5>"{quote.quote}"</h5>
+                <p style={{fontSize: '18px', padding: 0}}>~{quote.writer}</p>
               </CardBody>
             </Card>
           </div>

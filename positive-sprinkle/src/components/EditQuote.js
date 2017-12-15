@@ -21,6 +21,7 @@ class EditQuote extends Component {
         <div>
            <Label for="quote">Quote :</Label>
            <Field
+             style={{fontSize: '25px'}}
               name="quote"
               component="input"
               type="text"
@@ -29,7 +30,7 @@ class EditQuote extends Component {
          <div>
            <Label for="writer">Writer :</Label>
            <Field
-             style={{fontSize: 200}}
+             style={{fontSize: '25px'}}
               name="writer"
               component="input"
               type="text"
@@ -38,12 +39,13 @@ class EditQuote extends Component {
          <div>
            <Label for="img">Image :</Label>
            <Field
+             style={{fontSize: '25px'}}
               name="img"
               component="input"
               type="text"
                />
          </div>
-         <button type="submit"> Update </button>
+         <button style={{ fontSize: '20px'}} type="submit"> Update </button>
       </Form>
       </div>
       </Container>

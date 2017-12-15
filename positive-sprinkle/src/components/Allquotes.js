@@ -22,14 +22,14 @@ class Allquotes extends Component{
     )
   let theQuotes = filteredQuotes.map( quote => {
     return (
-      <Col key={quote.id} xs="6" sm="4" style={{ border: ' 1px solid'}}>
+      <Col key={quote.id} xs="6" sm="4" style={{ border: ' 0px'}}>
         <Quote quote={quote} />
           <img src={Edit} alt="edit" height='45' onClick={() => this.props.history.push('/edit/' + quote.id)} />
       </Col>
     )
   })
   return (
-    <div style={{ marginTop: '2%', marginBottom: '2%'}}>
+    <div style={{ marginTop:'2%', marginBottom: '2%'}}>
       <div >
         <Row>
           <Col sm="12" md={{ size: 8, offset: 2 }}>
