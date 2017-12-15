@@ -15,11 +15,11 @@ class EditQuote extends Component {
     console.log('props', this.props);
     const { handleSubmit } = this.props
     return (
-      <Container style={{ marginTop: "15%"}}>
+      <Container style={{ marginTop: "4%", padding: 100}}>
       <div style={{ backgroundColor: "#EFF1F4"}}>
-      <Form onSubmit={handleSubmit(this.theQuote)}>
+      <Form onSubmit={handleSubmit(this.theQuote)} style={{padding: 100}}>
         <div>
-           <Label for="quote">Quote</Label>
+           <Label for="quote">Quote :</Label>
            <Field
               name="quote"
               component="input"
@@ -27,15 +27,16 @@ class EditQuote extends Component {
               />
          </div>
          <div>
-           <Label for="writer">Writer</Label>
+           <Label for="writer">Writer :</Label>
            <Field
+             style={{fontSize: 200}}
               name="writer"
               component="input"
               type="text"
              />
          </div>
          <div>
-           <Label for="img">Image</Label>
+           <Label for="img">Image :</Label>
            <Field
               name="img"
               component="input"
