@@ -14,7 +14,7 @@ class QuoteInput extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.addQuotes(this.state)
-    this.props.history.push('/viewquotes')
+    // this.props.history.push('/viewquotes')
   }
   render() {
     return (
