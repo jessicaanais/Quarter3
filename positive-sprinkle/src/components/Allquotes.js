@@ -36,7 +36,7 @@ class Allquotes extends Component{
           <Input type="text" placeholder="Search . . ."
             value={this.state.search}
             onChange={this.updateSearch.bind(this)}
-            style={{ height: 50, fontSize: '40px', marginBottom: 25}}
+            style={{borderBottomStyle: "solid", borderBottomColor: "#eff1f4'", height: 50, fontSize: 30, borderBottomWidth: 3, marginBottom: 25, outline: "none"}}
             />
           </Col>
         </Row>
