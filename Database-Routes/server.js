@@ -6,13 +6,16 @@ const path = require("path");
 const app = express();
 const bodyParser = require('body-parser');
 const port = process.env.PORT || 8000;
+const cors = require('cors');
+
 app.use(bodyParser.json({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors())
 
 
 app.use('/', require('./routes/category.js'));
 
-app.use('/', require('./routes/quotes.js'));
+app.use('/quotes', require('./routes/quotes.js'));
 
 
 app.listen(port, function() {
