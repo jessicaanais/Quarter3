@@ -9,6 +9,9 @@ class Allquotes extends Component{
     return (
       <Col key={quote.id} xs="6" sm="4" style={{ padding: 5}}>
         <Quote quote={quote} />
+          <button
+              onClick={() => this.props.history.push('/edit/' + quote.id)}
+            >Edit me</button>
       </Col>
     )
   })

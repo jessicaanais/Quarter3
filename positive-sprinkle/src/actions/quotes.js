@@ -45,3 +45,17 @@ export const removeQuote = (id) => {
     })
   }
 }
+
+export const EDIT_QUOTE_PENDING = 'EDIT_QUOTE_PENDING';
+export const EDIT_QUOTE_SUCCESS ='EDIT_QUOTE_SUCCESS'
+
+export const editQuotes = (quote) => {
+  return async (dispatch) => {
+    dispatch({ type: EDIT_QUOTE_PENDING })
+    let quotes = await axios.patch(`http://localhost:8000/quotes/${quote.id}`, quote)
+    dispatch({
+      type: EDIT_QUOTE_SUCCESS,
+      payload: quotes
+    })
+  }
+}

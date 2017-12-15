@@ -8,6 +8,7 @@ import Motivation from './Motivation'
 import Relationships from './Relationships'
 import { ButtonGroup, Button, Container, Row, Col } from 'reactstrap'
 import QuoteInput from './QuoteInput'
+import EditQuote from './EditQuote'
 import {
   BrowserRouter as Router,
   Route,
@@ -53,6 +54,7 @@ class Routes extends Component {
               <Route exact path="/Confidence" component={Confidence}/>
               <Route exact path="/Family" component={Family}/>
               <Route exact path="/Life" component={Life}/>
+              <Route exact path="/edit/:id" component={EditQuote}/>
             </Switch>
 
           </div>

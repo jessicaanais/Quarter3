@@ -3,6 +3,8 @@ import { Card, CardImg, CardText, CardBody, Button } from 'reactstrap';
 import { removeQuote } from '../actions/quotes'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
+import Outline from 'react-icons/lib/ti/heart-outline'
+import Heart from 'react-icons/lib/ti/heart'
 
 const Quote = (props) => {
   let { id, quote, img, writer } = props.quote
@@ -13,6 +15,8 @@ const Quote = (props) => {
         <CardBody>
           <h5>{quote}</h5>
           <CardText style={{fontSize:13}}>-{writer}</CardText>
+          <Outline />
+          <Heart />
           <Button onClick = {() => props.removeQuote(id)}> Remove </Button>
         </CardBody>
       </Card>

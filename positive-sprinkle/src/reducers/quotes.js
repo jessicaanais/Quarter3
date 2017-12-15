@@ -4,7 +4,9 @@ import {
   ADD_QUOTES_PENDING,
   ADD_QUOTES_SUCCESS,
   REMOVE_QUOTE_PENDING,
-  REMOVE_QUOTE_SUCCESS
+  REMOVE_QUOTE_SUCCESS,
+  EDIT_QUOTE_PENDING,
+  EDIT_QUOTE_SUCCESS
 } from '../actions/quotes'
 
 export default(state = [], action) => {
@@ -20,6 +22,10 @@ export default(state = [], action) => {
     case REMOVE_QUOTE_PENDING:
       return state;
     case REMOVE_QUOTE_SUCCESS:
+      return [...action.payload.data];
+    case EDIT_QUOTE_PENDING:
+      return state;
+    case EDIT_QUOTE_SUCCESS:
       return [...action.payload.data];
     default:
       return state;
