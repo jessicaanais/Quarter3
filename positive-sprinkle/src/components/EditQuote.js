@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { Field, reduxForm } from 'redux-form'
 import { editQuotes } from '../actions/quotes'
-import { Label, Form} from 'reactstrap'
+import { Label, Form, Container} from 'reactstrap'
 
 class EditQuote extends Component {
   theQuote = (values) => {
@@ -15,7 +15,8 @@ class EditQuote extends Component {
     console.log('props', this.props);
     const { handleSubmit } = this.props
     return (
-      <div>
+      <Container style={{ marginTop: "15%"}}>
+      <div style={{ backgroundColor: "#EFF1F4"}}>
       <Form onSubmit={handleSubmit(this.theQuote)}>
         <div>
            <Label for="quote">Quote</Label>
@@ -44,6 +45,7 @@ class EditQuote extends Component {
          <button type="submit"> Update </button>
       </Form>
       </div>
+      </Container>
     )
   }
 }

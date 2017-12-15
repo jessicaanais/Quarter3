@@ -10,7 +10,7 @@ class Motivation extends Component{
       return (
         <Col key={quote.id} xs="6" style={{ padding: 5}}>
           <div className="card">
-            <Card style={{ marginTop: 10}}>
+            <Card>
               <CardImg top width="100%" src={quote.img} alt="Card image cap" height="300" />
               <CardBody style={{ paddingBottom: 0}}>
                 <h5>{quote.quote}</h5>
@@ -24,11 +24,10 @@ class Motivation extends Component{
     })
 
   return (
-    <div>
+    <div style={{marginTop: 20}}>
       <Container>
         <Row>
           {bye}
-
         </Row>
       </Container>
     </div>

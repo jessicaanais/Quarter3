@@ -1,11 +1,17 @@
 import React from 'react';
-// import { Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 
 const Footer = () => {
   return (
-    <div style={{ backgroundColor: '#eff1f4'}}>
-        <p style={{ margin: 0}}>.</p>
-    </div>
+    <div>
+      <footer>
+              <Row style={{ backgroundColor: "#eff1f4"}}>
+                <Col style={{color: "#eff1f4"}}>
+                  .
+                </Col>
+            </Row>
+        </footer>
+      </div>
   )
 }
 

@@ -14,6 +14,7 @@ class QuoteInput extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     this.props.addQuotes(this.state)
+    this.props.history.push('/viewquotes')
   }
   render() {
     return (
@@ -62,7 +63,7 @@ class QuoteInput extends Component {
         </FormGroup>
         </Col>
         </Row>
-        <Button type="submit"> Add Quote </Button>
+        <Button> Add Quote </Button>
       </Form>
       </div>
     );

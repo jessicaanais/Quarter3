@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: 'Cardo', serif;
+  height: 100%;
 }
 
 .App-logo {
@@ -30,4 +31,22 @@
 
 .header {
   font-family: 'Clicker Script', cursive;
+}
+
+div.App {
+  min-height: 100vh;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+Label {
+  font-size: 32px;
 }
